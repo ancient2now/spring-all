@@ -1,4 +1,4 @@
-package com.akikun.springboot.controller;
+package com.akikun.springboot.web;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

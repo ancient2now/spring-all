@@ -1,0 +1,9 @@
+project:
+  name: spring-boot
+  version: 1.0
+  author: Li Junqiu
+  url: https://github.com/ancient2now/spring-all
+
+spring:
+  profiles:
+    active: dev

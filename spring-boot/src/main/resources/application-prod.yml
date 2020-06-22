@@ -1,0 +1,6 @@
+env:
+  profile: prod
+
+server:
+  port: 8081
+
