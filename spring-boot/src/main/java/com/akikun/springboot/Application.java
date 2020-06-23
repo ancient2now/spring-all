@@ -1,10 +1,7 @@
 package com.akikun.springboot;
 
-import com.akikun.springboot.config.ProjectConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication

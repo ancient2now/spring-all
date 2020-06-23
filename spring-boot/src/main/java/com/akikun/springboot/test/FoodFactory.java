@@ -33,15 +33,15 @@ public class FoodFactory {
     }
 
     Cuisine serveFood(String cuisineKey, String dish) {
+        Cuisine cuisine = null;
         try {
-            Cuisine cuisine = Cuisine.valueOf(cuisineKey);
+            cuisine = Cuisine.valueOf(cuisineKey);
             cuisine.serveFood(dish);
-            return cuisine;
         } catch (Exception e) {
             String print = String.format("Unservelable cuisine %s for dish %s ", cuisineKey, dish);
             System.err.println(print);
-            return null;
         }
+        return cuisine;
     }
 
     enum Cuisine {
@@ -63,7 +63,6 @@ public class FoodFactory {
         String getDish() {
             return dish[0];
         }
-
     }
 }
 

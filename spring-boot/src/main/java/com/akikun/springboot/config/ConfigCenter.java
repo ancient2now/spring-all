@@ -9,17 +9,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConfigCenter {
 
-    private final Environment env;
+    private static Environment env;
 
-    private final Binder binder;
+    private static ProjectProperty projectProperty;
 
     @Autowired
     private ConfigCenter(Environment env){
         this.env = env;
-        binder = Binder.get(env);
     }
 
-    public ProjectConfig getProject() {
-        return binder.bind("project", Bindable.of(ProjectConfig.class)).get();
+    public static ProjectProperty getProject() {
+        if (projectProperty == null) {
+            synchronized (ConfigCenter.class) {
+                if (projectProperty == null) {
+                    projectProperty = Binder.get(env)
+                            .bind("project", Bindable.of(ProjectProperty.class))
+                            .get();
+                }
+            }
+        }
+        return projectProperty;
     }
 }
