@@ -1,4 +1,4 @@
-package com.akikun.springboot.web;
+package com.akikun.springboot.controller;
 
 import com.akikun.springboot.exception.NotFoundException;
 import org.springframework.web.bind.annotation.RequestMapping;

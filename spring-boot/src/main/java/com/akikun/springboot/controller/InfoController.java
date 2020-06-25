@@ -1,4 +1,4 @@
-package com.akikun.springboot.web;
+package com.akikun.springboot.controller;
 
 import com.akikun.springboot.config.ConfigCenter;
 import com.akikun.springboot.config.ProjectProperty;
