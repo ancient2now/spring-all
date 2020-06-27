@@ -32,4 +32,7 @@ hs_err_pid*
 *.iml
 *.ipr
 
+# Gradle #
+.gradle
+
 

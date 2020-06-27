@@ -18,6 +18,10 @@ public class ConfigCenter {
         this.env = env;
     }
 
+    private ConfigCenter() {
+
+    }
+
     public static ProjectProperty getProject() {
         if (projectProperty == null) {
             synchronized (ConfigCenter.class) {
