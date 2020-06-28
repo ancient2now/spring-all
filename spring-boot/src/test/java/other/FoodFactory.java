@@ -1,4 +1,4 @@
-package com.akikun.springboot.test;
+package other;
 
 import java.util.Scanner;
 
