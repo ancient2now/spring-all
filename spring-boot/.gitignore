@@ -35,3 +35,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+## Product Enviorment ##
+src/main/resources/*prod.yml
