@@ -20,9 +20,9 @@ public class ConfigTest {
     public void testProjectInfo() {
         StringBuilder sb = new StringBuilder();
         sb.append("Project info: ").append('[').append("\n");
-        sb.append("    name: ").append(projectName).append(',').append("\n");
-        sb.append("    author: ").append(projectAuthor).append(',').append("\n");
-        sb.append("    url: ").append(projectUrl).append("\n");
+        sb.append("\tname: ").append(projectName).append(',').append("\n");
+        sb.append("\tauthor: ").append(projectAuthor).append(',').append("\n");
+        sb.append("\turl: ").append(projectUrl).append("\n");
         sb.append(']');
         System.err.println(sb.toString());
     }
