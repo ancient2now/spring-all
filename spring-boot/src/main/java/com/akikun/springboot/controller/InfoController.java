@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/info")
 public class InfoController {
 
-    @Autowired
-    private DBService dbService;
+    private final DBService dbService;
+
+    public InfoController(DBService dbService) {
+        this.dbService = dbService;
+    }
 
     @RequestMapping("/project")
     public ProjectProperty project() {
@@ -26,6 +29,11 @@ public class InfoController {
     @RequestMapping("/tableNames")
     public List<String> tableNames() {
         return dbService.getAllTableNames();
+    }
+
+    @RequestMapping("/tableNums")
+    public int tableNums() {
+        return dbService.countTables();
     }
 
 }
