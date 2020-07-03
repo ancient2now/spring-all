@@ -8,8 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class Application {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context =
-				SpringApplication.run(Application.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 	}
 
 }
