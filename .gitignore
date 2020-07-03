@@ -34,5 +34,6 @@ hs_err_pid*
 
 # Gradle #
 .gradle
+build
 
 

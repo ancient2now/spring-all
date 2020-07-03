@@ -1,6 +1,4 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.1.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 }
 
@@ -8,39 +6,3 @@ group = 'com.akikun'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '8'
 
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	// spring-boot
-	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation ('org.springframework.boot:spring-boot-starter-web') {
-		exclude group: 'org.springframework'
-	}
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
-	implementation 'mysql:mysql-connector-java'
-
-	implementation 'org.springframework:spring-webmvc:5.2.7.RELEASE'
-
-	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
-
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
-
-
-	// lombok
-	compileOnly 'org.projectlombok:lombok:1.18.12'
-	annotationProcessor 'org.projectlombok:lombok:1.18.12'
-
-	testCompileOnly 'org.projectlombok:lombok:1.18.12'
-	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
-
-}
-
-test {
-	useJUnitPlatform()
-}
